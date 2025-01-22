@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "BookStore.Presentation.Controllers.UserController",
+    "Method": "Add_order",
+    "RelativePath": "api/User/AddOrder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "Domain.Entities.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

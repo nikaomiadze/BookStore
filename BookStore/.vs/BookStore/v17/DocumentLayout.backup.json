@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikao\\source\\repos\\BookStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8836401D-6D65-4615-835F-0FFA381A9736}|BookStore.Presentation\\BookStore.Presentation.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\bookstore.presentation\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8836401D-6D65-4615-835F-0FFA381A9736}|BookStore.Presentation\\BookStore.Presentation.csproj|solutionrelative:bookstore.presentation\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8836401D-6D65-4615-835F-0FFA381A9736}|BookStore.Presentation\\BookStore.Presentation.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\bookstore.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8836401D-6D65-4615-835F-0FFA381A9736}|BookStore.Presentation\\BookStore.Presentation.csproj|solutionrelative:bookstore.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17E940EF-3023-4C65-91CE-D9FB71F6C1B2}|Infrastructure\\Infrastructure.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\infrastructure\\dataaccess\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17E940EF-3023-4C65-91CE-D9FB71F6C1B2}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dataaccess\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\domain\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|solutionrelative:domain\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A48C54F-15E1-48EA-A750-B26FF861A5AF}|Application\\Application.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A48C54F-15E1-48EA-A750-B26FF861A5AF}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17E940EF-3023-4C65-91CE-D9FB71F6C1B2}|Infrastructure\\Infrastructure.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{17E940EF-3023-4C65-91CE-D9FB71F6C1B2}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|c:\\users\\nikao\\source\\repos\\bookstore\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F82D4E5E-A192-4EAA-AD46-C16C093BCE99}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\BookStore.Presentation\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "BookStore.Presentation\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\BookStore.Presentation\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "BookStore.Presentation\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:04:54.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\BookStore.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "BookStore.Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\BookStore.Presentation\\Program.cs",
+              "RelativeToolTip": "BookStore.Presentation\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvycAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T14:50:58.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\Infrastructure\\DataAccess\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DataAccess\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\Infrastructure\\DataAccess\\UserRepository.cs",
+              "RelativeToolTip": "Infrastructure\\DataAccess\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T14:43:21.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Infrastructure",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\Infrastructure\\Infrastructure.csproj",
+              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-22T14:42:55.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T14:38:00.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T14:35:30.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Interface\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interface\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Interface\\IUserRepository.cs",
+              "RelativeToolTip": "Domain\\Interface\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T14:34:16.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Entities\\Book.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Book.cs",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Entities\\Book.cs",
+              "RelativeToolTip": "Domain\\Entities\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T12:31:24.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Domain",
+              "DocumentMoniker": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\nikao\\source\\repos\\BookStore\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-22T12:26:04.198Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
