@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.Entities;
 
-namespace Domain.Interface
+namespace Domain.Entities
 {
-    public interface IUserRepository
+    public class Token
     {
-         void  Add_Order(Order order);
+        public string? AccessToken { get; set; }
 
     }
 }

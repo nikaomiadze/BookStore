@@ -1,8 +1,40 @@
 [
   {
+    "ContainingType": "BookStore.Presentation.Controllers.AdminController",
+    "Method": "Add_Book",
+    "RelativePath": "api/Admin/Add_Book",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "book",
+        "Type": "Domain.Entities.Book",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStore.Presentation.Controllers.AdminController",
+    "Method": "Delete_book",
+    "RelativePath": "api/Admin/Delete_book",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BookStore.Presentation.Controllers.UserController",
     "Method": "Add_order",
-    "RelativePath": "api/User/AddOrder",
+    "RelativePath": "api/User/Add_order",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -10,6 +42,38 @@
       {
         "Name": "order",
         "Type": "Domain.Entities.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStore.Presentation.Controllers.UserController",
+    "Method": "Add_User",
+    "RelativePath": "api/User/Add_User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Domain.Entities.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStore.Presentation.Controllers.UserController",
+    "Method": "Authentification",
+    "RelativePath": "login_user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginData",
+        "Type": "Domain.DTOs.LoginDTO",
         "IsRequired": true
       }
     ],

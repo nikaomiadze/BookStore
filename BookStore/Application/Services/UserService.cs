@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities;
-using Domain.Interface;
+using Domain.Interfaces;
+using Application.Interfaces;
+using Domain.DTOs;
+
 
 namespace Application.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 
@@ -21,5 +24,14 @@ namespace Application.Services
         {
             _userRepository.Add_Order(order);
         }
+        public User? authentification(LoginDTO loginData)
+        {
+           return _userRepository.authentification(loginData);
+        }
+        public void Add_User(User user)
+        {
+            _userRepository.Add_User(user);
+        }
+        
     }
 }

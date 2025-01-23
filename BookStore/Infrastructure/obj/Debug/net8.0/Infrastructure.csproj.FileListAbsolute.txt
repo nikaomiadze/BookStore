@@ -15,3 +15,21 @@ C:\Users\nikao\source\repos\BookStore\Infrastructure\obj\Debug\net8.0\Infrastruc
 C:\Users\nikao\source\repos\BookStore\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
 C:\Users\nikao\source\repos\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\nikao\source\repos\BookStore\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\bin\Debug\net8.0\Application.dll
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\bin\Debug\net8.0\Domain.dll
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\bin\Debug\net8.0\Application.pdb
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\bin\Debug\net8.0\Domain.pdb
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+C:\Users\nikoloz.omiadze\Desktop\New folder\BookStore\BookStore\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
