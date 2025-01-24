@@ -12,4 +12,7 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\nikoloz.omiadze\.nuget\packages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgFluentAssertions Condition=" '$(PkgFluentAssertions)' == '' ">C:\Users\nikoloz.omiadze\.nuget\packages\fluentassertions\8.0.1</PkgFluentAssertions>
+  </PropertyGroup>
 </Project>

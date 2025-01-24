@@ -73,7 +73,7 @@
     "Parameters": [
       {
         "Name": "loginData",
-        "Type": "Domain.DTOs.LoginDTO",
+        "Type": "Application.DTOs.LoginDTO",
         "IsRequired": true
       }
     ],

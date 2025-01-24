@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "FluentAssertions/8.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.12": {
         "type": "package",
         "dependencies": {
@@ -514,6 +527,7 @@
         "dependencies": {
           "Application": "1.0.0",
           "Domain": "1.0.0",
+          "FluentAssertions": "8.0.1",
           "Oracle.ManagedDataAccess.Core": "23.7.0"
         },
         "compile": {
@@ -526,6 +540,33 @@
     }
   },
   "libraries": {
+    "FluentAssertions/8.0.1": {
+      "sha512": "IW5CdXiD4BIijMkJsEajhkQr7HSgzoxZBHp77b4tm8isCKGaDH2AGugW6DLS0/EPhO/MCZ2JOGg6ObdlKISJMg==",
+      "type": "package",
+      "path": "fluentassertions/8.0.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentAssertions.png",
+        "LICENSE.md",
+        "fluentassertions.8.0.1.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/net6.0/FluentAssertions.dll",
+        "lib/net6.0/FluentAssertions.pdb",
+        "lib/net6.0/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml",
+        "lib/netstandard2.1/FluentAssertions.dll",
+        "lib/netstandard2.1/FluentAssertions.pdb",
+        "lib/netstandard2.1/FluentAssertions.xml",
+        "tools/init.ps1"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.12": {
       "sha512": "Th1bIoe3lgQCtkZRzYpU3YruTIaa/C5jI6yJ7djXihtvHGc6WFl823Uh01P2ESbn2eIpgiEbwRw/szlPSPowDA==",
       "type": "package",
@@ -1542,11 +1583,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
       "projectName": "BookStore.Presentation",
-      "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+      "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
       "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
+      "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1564,8 +1605,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

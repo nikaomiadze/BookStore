@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SzQ6BepBY2g=",
+  "dgSpecHash": "7w5o73hIycg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\fluentassertions\\8.0.1\\fluentassertions.8.0.1.nupkg.sha512",
     "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.12\\microsoft.aspnetcore.authentication.jwtbearer.8.0.12.nupkg.sha512",
     "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\microsoft.bcl.memory\\9.0.0\\microsoft.bcl.memory.9.0.0.nupkg.sha512",
     "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.1\\microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",

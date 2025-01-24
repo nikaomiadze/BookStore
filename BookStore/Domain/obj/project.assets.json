@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder\\BookStore\\BookStore\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",

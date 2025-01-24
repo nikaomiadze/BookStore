@@ -1,6 +1,5 @@
 using Application.Interfaces;
 using Application.Services;
-using Domain.Interfaces;
 using Infrastructure.DataAccess;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -10,31 +9,25 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 
+var connectionString = builder.Configuration.GetConnectionString("OracleConnStr");
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("Connection string 'OracleConnStr' is not configured.");
+}
 
-// Register IUserRepository with a connection string
 builder.Services.AddScoped<IUserRepository>(provider =>
 {
-    var configuration = provider.GetRequiredService<IConfiguration>();
-    var connectionString = configuration.GetConnectionString("OracleConnStr");
-    if (string.IsNullOrEmpty(connectionString))
-    {
-        throw new ArgumentNullException(nameof(connectionString), "Connection string cannot be null or empty.");
-    }
+    var connStr = provider.GetRequiredService<string>();
     return new UserRepository(connectionString);
 });
 builder.Services.AddScoped<IAdminRepository>(provider =>
 {
-    var configuration = provider.GetRequiredService<IConfiguration>();
-    var connectionString = configuration.GetConnectionString("OracleConnStr");
-    if (string.IsNullOrEmpty(connectionString))
-    {
-        throw new ArgumentNullException(nameof(connectionString), "Connection string cannot be null or empty.");
-    }
-    return new AdminRepository(connectionString);
+    var connStr = provider.GetRequiredService<string>();
+    return new AdminRepository(connStr);
 });
+builder.Services.AddSingleton(connectionString);
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAdminService, AdminService>();

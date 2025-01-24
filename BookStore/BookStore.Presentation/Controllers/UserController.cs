@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Application.Services;
 using Domain.Entities;
 using Application.Interfaces;
-using Domain.DTOs;
+using Application.DTOs;
 namespace BookStore.Presentation.Controllers
 {
     [Route("api/[controller]/[action]")]

@@ -4,17 +4,20 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.DTOs;
+using Application.DTOs;
 using Domain.Entities;
-using Domain.Interfaces;
+using Application.Interfaces;
 using Oracle.ManagedDataAccess.Client;
 
 namespace Infrastructure.DataAccess
 {
-    public class UserRepository(string connectionString) : IUserRepository
+    public class UserRepository: IUserRepository
     {
-        private readonly string _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
-
+        private readonly string _connectionString;
+        public UserRepository(string connectionString)
+        {
+            _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+        }
         public void Add_Order(Order order)
         {
             using (var conn = new OracleConnection(_connectionString))

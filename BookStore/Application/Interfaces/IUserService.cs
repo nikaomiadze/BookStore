@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    using Domain.DTOs;
+    using Application.DTOs;
     using Domain.Entities;
 
     public interface IUserService
