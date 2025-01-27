@@ -11,6 +11,9 @@ namespace Application.Interfaces
     {
         void Add_book(Book book);
         void Delete_book(int id);
+        List<Order> Get_orders();
+        void Complete_order(int id);
+        List<Order> Get_user_order(int id);
 
     }
 }

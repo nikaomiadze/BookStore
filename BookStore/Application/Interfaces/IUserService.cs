@@ -11,11 +11,9 @@ namespace Application.Interfaces
 
     public interface IUserService
     {
-        void Add_order(Order order);
+        void Add_order(OrderDTO orderDTO);
         User? authentification(LoginDTO loginData);
         void Add_User(User user);
-
-
 
     }
 }

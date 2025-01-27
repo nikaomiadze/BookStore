@@ -18,7 +18,7 @@ namespace Infrastructure.DataAccess
         {
             _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
         }
-        public void Add_Order(Order order)
+        public void Add_Order(OrderDTO orderDTO)
         {
             using (var conn = new OracleConnection(_connectionString))
             {
@@ -26,9 +26,9 @@ namespace Infrastructure.DataAccess
                 using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_ORDERS.add_order", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("v_username", OracleDbType.Varchar2).Value = order.User_name;
-                    cmd.Parameters.Add("v_book_id", OracleDbType.Int32).Value = order.Book_id;
-                    cmd.Parameters.Add("v_quantity", OracleDbType.Int32).Value = order.Quantity;
+                    cmd.Parameters.Add("v_user_id", OracleDbType.Varchar2).Value = orderDTO.User_id;
+                    cmd.Parameters.Add("v_book_id", OracleDbType.Int32).Value = orderDTO.Book_id;
+                    cmd.Parameters.Add("v_quantity", OracleDbType.Int32).Value = orderDTO.Quantity;
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -77,8 +77,9 @@ namespace Infrastructure.DataAccess
                 using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_USERS.user_register", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("p_user_name", OracleDbType.Varchar2).Value = user.User_name;
-                    cmd.Parameters.Add("p_password", OracleDbType.Varchar2).Value = user.Password;
+                    cmd.Parameters.Add("v_user_name", OracleDbType.Varchar2).Value = user.User_name;
+                    cmd.Parameters.Add("v_password", OracleDbType.Varchar2).Value = user.Password;
+                    cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = user.Email;
                     cmd.ExecuteNonQuery();
 
                 }

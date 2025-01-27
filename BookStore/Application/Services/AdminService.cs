@@ -23,6 +23,18 @@ namespace Application.Services
         public void Delete_book(int id) {
             _adminRepository.Delete_book(id);
         }
+        public List<Order> Get_orders()
+        {
+             return _adminRepository.Get_orders();         
+        }
+        public void Complete_order(int id)
+        {
+            _adminRepository.Complete_order(id);
+        }
+        public List<Order> Get_user_order(int id)
+        {
+            return _adminRepository.Get_user_order(id);
+        }
 
     }
 }

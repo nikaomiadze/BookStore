@@ -20,11 +20,11 @@ namespace BookStore.Presentation.Controllers
 
         }
 
-        [HttpPost]
-        public IActionResult Add_order([FromBody] Order order)
+        [HttpPost("/add_order")]
+        public IActionResult Add_order([FromBody] OrderDTO orderDTO)
         {
-            _userService.Add_order(order);
-            return Ok();
+            _userService.Add_order(orderDTO);
+            return Ok("order added successfully");
         }
         [HttpPost("/login_user")]
         public IActionResult Authentification(LoginDTO loginData)
@@ -49,11 +49,11 @@ namespace BookStore.Presentation.Controllers
 
 
         }
-        [HttpPost]
+        [HttpPost("/add_user")]
         public IActionResult Add_User([FromBody] User user)
         {
            _userService.Add_User(user);
-            return Ok();
+            return Ok("user added successfully");
         }
     }
 }

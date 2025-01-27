@@ -19,9 +19,9 @@ namespace Application.Services
             _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
         }
 
-        public void Add_order(Order order)
+        public void Add_order(OrderDTO orderDTO)
         {
-            _userRepository.Add_Order(order);
+            _userRepository.Add_Order(orderDTO);
         }
         public User? authentification(LoginDTO loginData)
         {

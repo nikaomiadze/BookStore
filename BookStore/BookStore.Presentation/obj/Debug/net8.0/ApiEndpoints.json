@@ -2,7 +2,7 @@
   {
     "ContainingType": "BookStore.Presentation.Controllers.AdminController",
     "Method": "Add_Book",
-    "RelativePath": "api/Admin/Add_Book",
+    "RelativePath": "add_book",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,9 +16,57 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BookStore.Presentation.Controllers.UserController",
+    "Method": "Add_order",
+    "RelativePath": "add_order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderDTO",
+        "Type": "Application.DTOs.OrderDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStore.Presentation.Controllers.UserController",
+    "Method": "Add_User",
+    "RelativePath": "add_user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Domain.Entities.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStore.Presentation.Controllers.AdminController",
+    "Method": "Complete_order",
+    "RelativePath": "complete_order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BookStore.Presentation.Controllers.AdminController",
     "Method": "Delete_book",
-    "RelativePath": "api/Admin/Delete_book",
+    "RelativePath": "delete_book",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -32,36 +80,50 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BookStore.Presentation.Controllers.UserController",
-    "Method": "Add_order",
-    "RelativePath": "api/User/Add_order",
-    "HttpMethod": "POST",
+    "ContainingType": "BookStore.Presentation.Controllers.AdminController",
+    "Method": "Get_Orders",
+    "RelativePath": "get_orders",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
+    "Parameters": [],
+    "ReturnTypes": [
       {
-        "Name": "order",
-        "Type": "Domain.Entities.Order",
-        "IsRequired": true
+        "Type": "System.Collections.Generic.List\u00601[[Domain.Entities.Order, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
-    "ContainingType": "BookStore.Presentation.Controllers.UserController",
-    "Method": "Add_User",
-    "RelativePath": "api/User/Add_User",
-    "HttpMethod": "POST",
+    "ContainingType": "BookStore.Presentation.Controllers.AdminController",
+    "Method": "Get_user_orders",
+    "RelativePath": "get_user_orders",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "Domain.Entities.User",
-        "IsRequired": true
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Domain.Entities.Order, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BookStore.Presentation.Controllers.UserController",

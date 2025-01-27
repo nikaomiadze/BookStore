@@ -14,7 +14,7 @@ namespace BookStore.Presentation.Controllers
         {
             _adminService = adminService;
         }
-        [HttpPost]
+        [HttpPost("/add_book")]
         public IActionResult Add_Book([FromBody] Book book)
         {
             try
@@ -30,7 +30,7 @@ namespace BookStore.Presentation.Controllers
 
             }
         }
-        [HttpDelete]
+        [HttpDelete("/delete_book")]
         public IActionResult Delete_book([FromBody] int id)
         {
             try
@@ -44,6 +44,42 @@ namespace BookStore.Presentation.Controllers
                 return StatusCode(500, ex.Message);
 
             }
+        }
+        [HttpGet("/get_orders")]
+        public List<Order> Get_Orders()
+        {
+            List<Order> list = new List<Order>();
+            try
+            {
+                list = _adminService.Get_orders();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return list;
+        }
+        [HttpPost("/complete_order")]
+        public IActionResult Complete_order(int id)
+        {
+
+            _adminService.Complete_order(id);
+            return Ok("order completed successfully.");
+
+        }
+        [HttpGet("/get_user_orders")]
+        public List<Order> Get_user_orders(int id)
+        {
+            List<Order> list = new List<Order>();
+            try
+            {
+                list = _adminService.Get_user_order(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return list;
         }
 
     }
