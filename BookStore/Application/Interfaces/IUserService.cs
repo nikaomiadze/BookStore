@@ -15,5 +15,6 @@ namespace Application.Interfaces
         User? authentification(LoginDTO loginData);
         void Add_User(User user);
 
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.DTOs;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,10 @@ namespace Application.Interfaces
         void Delete_book(int id);
         List<Order> Get_orders();
         void Complete_order(int id);
-        List<Order> Get_user_order(int id);
+        List<UserOrderDTO> Get_user_order(int id);
+        List<Book> Get_books();
+        List<Book> Get_books_byID(int id);
+        void Update_Book(Book book);
 
     }
 }

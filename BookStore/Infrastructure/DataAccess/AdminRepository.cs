@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.DTOs;
+using Application.Interfaces;
 using Domain.Entities;
 using Oracle.ManagedDataAccess.Client;
 using System;
@@ -99,9 +100,9 @@ namespace Infrastructure.DataAccess
             }
 
         }
-        public List<Order> Get_user_order(int id)
+        public List<UserOrderDTO> Get_user_order(int id)
         {
-            List<Order> orders = new List<Order>();
+            List<UserOrderDTO> orders = new List<UserOrderDTO>();
 
             using (var conn = new OracleConnection(_connectionString))
             {
@@ -121,13 +122,14 @@ namespace Infrastructure.DataAccess
                         {
                             try
                             {
-                                Order order = new Order
+                                UserOrderDTO order = new UserOrderDTO
                                 {
                                     Id = reader["id"] != DBNull.Value ? Convert.ToInt32(reader["id"]) : 0,
-                                    Username = reader["user_name"]?.ToString(),
+                                    UserName = reader["user_name"]?.ToString(),
                                     Quantity = reader["quantity"] != DBNull.Value ? Convert.ToInt32(reader["quantity"]) : 0,
-                                    Book_name = reader["book_name"]?.ToString(),
-                                    Order_price = reader["order_price"] != DBNull.Value ? Convert.ToInt32(reader["id"]) : 0,
+                                    BookName = reader["book_name"]?.ToString(),
+                                    Author = reader["author"]?.ToString(),
+                                    Order_Price = reader["order_price"] != DBNull.Value ? Convert.ToInt32(reader["order_price"]) : 0,
                                 };
 
                                 orders.Add(order);
@@ -138,10 +140,97 @@ namespace Infrastructure.DataAccess
                             }
                         }
                     }
+                    conn.Close();
                 }
             }
 
             return orders;
+        }
+        public List<Book> Get_books()
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                conn.Open();
+                List<Book> books = new List<Book>();
+                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.get_book", conn))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add("p_result", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Book book = new Book
+                        {
+                            Id = int.Parse(reader["id"].ToString()),
+                            Book_name = reader["book_name"].ToString(),
+                            Author = reader["author"].ToString(),
+                            Quantity = int.Parse(reader["quantity"].ToString()),
+                            Price = int.Parse(reader["price"].ToString())
+                        };
+
+                        books.Add(book);
+                    }
+                    conn.Close();
+                    return books;
+                }
+            }
+        }
+        public List<Book> Get_books_byID(int id)
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                conn.Open();
+                List<Book> books = new List<Book>();
+                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.get_book_by_id", conn))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add("p_id", OracleDbType.Int32).Value = id;
+                    cmd.Parameters.Add("p_result", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Book book = new Book
+                        {
+                            Id = int.Parse(reader["id"].ToString()),
+                            Book_name = reader["book_name"].ToString(),
+                            Author = reader["author"].ToString(),
+                            Quantity = int.Parse(reader["quantity"].ToString()),
+                            Price = int.Parse(reader["price"].ToString())
+                        };
+
+                        books.Add(book);
+                    }
+                    conn.Close();
+                    return books;
+                }
+            }
+        }
+        public void Update_Book(Book book)
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.update_book", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("p_id", OracleDbType.Int32).Value = book.Id;
+                    cmd.Parameters.Add("p_book_name", OracleDbType.Varchar2).Value =
+                        book.Book_name=="string" ? DBNull.Value : book.Book_name;
+                    cmd.Parameters.Add("p_author", OracleDbType.Varchar2).Value =
+                        book.Author=="string" ? DBNull.Value : book.Author;
+                    cmd.Parameters.Add("p_quantity", OracleDbType.Int32).Value =
+                        book.Quantity > 0 ? book.Quantity : DBNull.Value;
+                    cmd.Parameters.Add("p_price", OracleDbType.Int32).Value =
+                        book.Price > 0 ? book.Price : DBNull.Value;
+
+                    cmd.ExecuteNonQuery();
+                }
+                conn.Clone();
+            }
         }
 
     }
