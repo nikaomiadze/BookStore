@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {}
+    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Application\\Application.csproj": {
+    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Application\\obj\\",
+        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj"
+              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {
+    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
         "projectName": "BookStore.Presentation",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
         "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
+        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,8 +112,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -173,14 +173,14 @@
         }
       }
     },
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj": {
+    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -234,14 +234,14 @@
         }
       }
     },
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -259,11 +259,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Application\\Application.csproj"
+              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj"
               },
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\New folder (2)\\BookStore\\BookStore\\Domain\\Domain.csproj"
+              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj"
               }
             }
           }
