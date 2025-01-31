@@ -41,7 +41,7 @@ namespace Infrastructure.DataAccess
                 using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_USERS.auth_user", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("p_user_name", OracleDbType.Varchar2).Value = loginData.User_name;
+                    cmd.Parameters.Add("p_email", OracleDbType.Varchar2).Value = loginData.Email;
                     cmd.Parameters.Add("p_password", OracleDbType.Varchar2).Value = loginData.Password;
                     cmd.Parameters.Add("p_result", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
                     User? user = null;

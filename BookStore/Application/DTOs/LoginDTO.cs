@@ -8,7 +8,7 @@ namespace Application.DTOs
 {
     public class LoginDTO
     {
-        public string? User_name { get; set; }
+        public string? Email { get; set; }
         public string? Password { get; set; }
 
     }
