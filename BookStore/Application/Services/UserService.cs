@@ -31,6 +31,20 @@ namespace Application.Services
         {
             _userRepository.Add_User(user);
         }
-        
+        public void Add_in_cart(CartDTO cart) 
+        {
+            _userRepository.Add_in_cart(cart);
+        }
+        public List<Cart> Get_user_cart(int id)
+        {
+            return _userRepository.Get_user_cart(id);
+        }
+        public List<UserDTO> Get_user_by_id(int id)
+        {
+            return _userRepository.Get_user_by_id(id);
+        }
+
+
+
     }
 }

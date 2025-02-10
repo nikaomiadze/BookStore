@@ -88,6 +88,88 @@ namespace Infrastructure.DataAccess
             }
 
         }
+        public void Add_in_cart(CartDTO cart) 
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_USERS.add_to_cart", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("v_user_id", OracleDbType.Int32).Value = cart.User_id;
+                    cmd.Parameters.Add("v_book_id", OracleDbType.Int32).Value = cart.Book_id;
+                    cmd.Parameters.Add("v_Quantity", OracleDbType.Int32).Value = cart.Quantity;
+                    cmd.ExecuteNonQuery();
+
+                }
+                conn.Close();
+
+            }
+        }
+        public List<Cart> Get_user_cart(int id)
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                conn.Open();
+                List<Cart> cart = new List<Cart>();
+                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_USERS.get_user_cart", conn))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add("p_id", OracleDbType.Int32).Value = id;
+                    cmd.Parameters.Add("p_result", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Cart book = new Cart
+                        {
+                            Id = int.Parse(reader["id"].ToString()),
+                            User_id = int.Parse(reader["user_id"].ToString()),
+                            Book_id = int.Parse(reader["book_id"].ToString()),
+                            Quantity = int.Parse(reader["quantity"].ToString()),
+                            Order_price = int.Parse(reader["order_price"].ToString())
+
+                        };
+
+                        cart.Add(book);
+                    }
+                    conn.Close();
+                    return cart;
+                }
+            }
+        }
+        public List<UserDTO> Get_user_by_id(int id)
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                conn.Open();
+                List<UserDTO> user = new List<UserDTO>();
+                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_USERS.get_user_by_id", conn))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
+                    cmd.Parameters.Add("p_result", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        UserDTO user1 = new UserDTO
+                        {
+                            Id = int.Parse(reader["id"].ToString()),
+                            User_Name = reader["user_name"].ToString(),
+                            User_role = reader["role"].ToString(),
+
+                        };
+
+                        user.Add(user1);
+                    }
+                    conn.Close();
+                    return user;
+                }
+            }
+        }
 
     }
 }
