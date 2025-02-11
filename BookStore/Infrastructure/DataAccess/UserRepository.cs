@@ -126,7 +126,8 @@ namespace Infrastructure.DataAccess
                         {
                             Id = int.Parse(reader["id"].ToString()),
                             User_id = int.Parse(reader["user_id"].ToString()),
-                            Book_id = int.Parse(reader["book_id"].ToString()),
+                            Book_name = reader["book_name"].ToString(),
+                            Author = reader["author"].ToString(),
                             Quantity = int.Parse(reader["quantity"].ToString()),
                             Order_price = int.Parse(reader["order_price"].ToString())
 
