@@ -171,6 +171,23 @@ namespace Infrastructure.DataAccess
                 }
             }
         }
+        public void Delete_cart_item(int id)
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_USERS.delete_cart_item", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
+                   
+                    cmd.ExecuteNonQuery();
+
+                }
+                conn.Close();
+
+            }
+        }
 
     }
 }

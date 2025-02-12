@@ -96,6 +96,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BookStore.Presentation.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "Delete_cart_item",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BookStore.Presentation.Controllers.AdminController",
     "Method": "Get_books",
     "RelativePath": "Get_books",

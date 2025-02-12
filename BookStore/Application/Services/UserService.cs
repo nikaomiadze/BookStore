@@ -43,6 +43,10 @@ namespace Application.Services
         {
             return _userRepository.Get_user_by_id(id);
         }
+        public void Delete_cart_item(int id) 
+        {
+            _userRepository.Delete_cart_item(id);
+        }
 
 
 

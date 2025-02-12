@@ -92,5 +92,12 @@ namespace BookStore.Presentation.Controllers
             return user;
 
         }
+        [HttpDelete("/Delete_cart_item")]
+        public IActionResult Delete(int id) 
+        {
+            _userService.Delete_cart_item(id);
+            return Ok("item deleted successfully");
+        }
+
     }
 }

@@ -17,6 +17,8 @@ namespace Application.Interfaces
         void Add_in_cart(CartDTO cart);
         List<Cart> Get_user_cart(int id);
         List<UserDTO> Get_user_by_id(int id);
+        void Delete_cart_item(int id);
+
 
     }
 }
