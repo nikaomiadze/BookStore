@@ -69,12 +69,11 @@ namespace Infrastructure.DataAccess
                     {
                         Order order = new Order
                         {
-                            Id = int.Parse(reader["id"].ToString()),
+                            Order_Id = int.Parse(reader["orderid"].ToString()),
                             Username = reader["user_name"].ToString(),
-                            User_id = int.Parse(reader["user_id"].ToString()),
-                            Book_id = int.Parse(reader["book_id"].ToString()),
-                            Quantity = int.Parse(reader["quantity"].ToString()),
-                            Order_price = int.Parse(reader["order_price"].ToString())
+                            Order_price = int.Parse(reader["totalamount"].ToString()),
+                            Order_date = reader["orderdate"].ToString(),
+                            Order_Status= reader["status"].ToString()
                         };
 
                         orders.Add(order);
@@ -163,7 +162,7 @@ namespace Infrastructure.DataAccess
                     {
                         Book book = new Book
                         {
-                            Id = int.Parse(reader["id"].ToString()),
+                            Id = int.Parse(reader["bookid"].ToString()),
                             Book_name = reader["book_name"].ToString(),
                             Author = reader["author"].ToString(),
                             Quantity = int.Parse(reader["quantity"].ToString()),
@@ -195,11 +194,11 @@ namespace Infrastructure.DataAccess
                     {
                         Book book = new Book
                         {
-                            Id = int.Parse(reader["id"].ToString()),
+                            Id = int.Parse(reader["bookid"].ToString()),
                             Book_name = reader["book_name"].ToString(),
                             Author = reader["author"].ToString(),
-                            Quantity = int.Parse(reader["quantity"].ToString()),
-                            Price = int.Parse(reader["price"].ToString())
+                            Price = int.Parse(reader["price"].ToString()),
+                            Quantity = int.Parse(reader["quantity"].ToString())
                         };
 
                         books.Add(book);

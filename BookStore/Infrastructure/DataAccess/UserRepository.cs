@@ -26,13 +26,13 @@ namespace Infrastructure.DataAccess
                 using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_ORDERS.add_order", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("v_user_id", OracleDbType.Varchar2).Value = orderDTO.User_id;
-                    cmd.Parameters.Add("v_book_id", OracleDbType.Int32).Value = orderDTO.Book_id;
-                    cmd.Parameters.Add("v_quantity", OracleDbType.Int32).Value = orderDTO.Quantity;
+                    cmd.Parameters.Add("v_user_id", OracleDbType.Int32).Value = orderDTO.User_id;
+
                     cmd.ExecuteNonQuery();
                 }
             }
         }
+
         public User? authentification(LoginDTO loginData)
         {
             using (var conn = new OracleConnection(_connectionString))
@@ -54,7 +54,7 @@ namespace Infrastructure.DataAccess
                             {
                                 user = new User
                                 {
-                                    Id = reader["id"] != DBNull.Value ? int.Parse(reader["id"].ToString()) : 0,
+                                    Id = reader["userid"] != DBNull.Value ? int.Parse(reader["userid"].ToString()) : 0,
                                 };
                             }
                         }
@@ -98,7 +98,7 @@ namespace Infrastructure.DataAccess
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("v_user_id", OracleDbType.Int32).Value = cart.User_id;
                     cmd.Parameters.Add("v_book_id", OracleDbType.Int32).Value = cart.Book_id;
-                    cmd.Parameters.Add("v_Quantity", OracleDbType.Int32).Value = cart.Quantity;
+                    cmd.Parameters.Add("v_quantity", OracleDbType.Int32).Value = cart.Quantity;
                     cmd.ExecuteNonQuery();
 
                 }
@@ -124,13 +124,13 @@ namespace Infrastructure.DataAccess
                     {
                         Cart book = new Cart
                         {
-                            Id = int.Parse(reader["id"].ToString()),
-                            User_id = int.Parse(reader["user_id"].ToString()),
+                            Id = int.Parse(reader["CartItemID"].ToString()),
+                            Cart_id = int.Parse(reader["CartID"].ToString()),
+                            User_id = int.Parse(reader["UserID"].ToString()),
                             Book_name = reader["book_name"].ToString(),
-                            Author = reader["author"].ToString(),
-                            Quantity = int.Parse(reader["quantity"].ToString()),
-                            Order_price = int.Parse(reader["order_price"].ToString())
-
+                            Author = reader["Author"].ToString(),
+                            Quantity = int.Parse(reader["Quantity"].ToString()),
+                            Order_price = int.Parse(reader["TotalPrice"].ToString()),
                         };
 
                         cart.Add(book);
@@ -158,8 +158,9 @@ namespace Infrastructure.DataAccess
                     {
                         UserDTO user1 = new UserDTO
                         {
-                            Id = int.Parse(reader["id"].ToString()),
+                            Id = int.Parse(reader["userid"].ToString()),
                             User_Name = reader["user_name"].ToString(),
+                            Email = reader["email"].ToString(),
                             User_role = reader["role"].ToString(),
 
                         };
