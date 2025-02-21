@@ -21,9 +21,9 @@ namespace BookStore.Presentation.Controllers
         }
 
         [HttpPost("/add_order")]
-        public IActionResult Add_order([FromBody] OrderDTO orderDTO)
+        public IActionResult Add_order(int id)
         {
-            _userService.Add_order(orderDTO);
+            _userService.Add_order(id);
             return Ok("order added successfully");
         }
         [HttpPost("/login_user")]

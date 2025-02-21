@@ -14,6 +14,8 @@ namespace Application.DTOs
         public int? Quantity { get; set; }
         public string? Author { get; set; }
         public int? Order_Price { get; set; }
+        public string? Order_Date { get; set; }
+        public string? Order_Status { get; set; }
 
     }
 }

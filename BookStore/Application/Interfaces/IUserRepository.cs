@@ -10,7 +10,7 @@ namespace Application.Interfaces
 {
     public interface IUserRepository
     {
-        void Add_Order(OrderDTO orderDTO);
+        void Add_Order(int id);
         User? authentification(LoginDTO loginData);
         void Add_User(User user);
         void Add_in_cart(CartDTO cart);

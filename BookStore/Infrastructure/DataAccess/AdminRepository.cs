@@ -119,24 +119,22 @@ namespace Infrastructure.DataAccess
                     {
                         while (reader.Read())
                         {
-                            try
-                            {
+                         
                                 UserOrderDTO order = new UserOrderDTO
                                 {
-                                    Id = reader["id"] != DBNull.Value ? Convert.ToInt32(reader["id"]) : 0,
+                                    Id = reader["orderid"] != DBNull.Value ? Convert.ToInt32(reader["orderid"]) : 0,
                                     UserName = reader["user_name"]?.ToString(),
                                     Quantity = reader["quantity"] != DBNull.Value ? Convert.ToInt32(reader["quantity"]) : 0,
                                     BookName = reader["book_name"]?.ToString(),
                                     Author = reader["author"]?.ToString(),
-                                    Order_Price = reader["order_price"] != DBNull.Value ? Convert.ToInt32(reader["order_price"]) : 0,
+                                    Order_Price = reader["totalamount"] != DBNull.Value ? Convert.ToInt32(reader["totalamount"]) : 0,
+                                    Order_Date = reader["orderdate"]?.ToString(),
+                                    Order_Status = reader["status"]?.ToString(),
+
                                 };
 
                                 orders.Add(order);
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine($"Error mapping data: {ex.Message}");
-                            }
+                           
                         }
                     }
                     conn.Close();

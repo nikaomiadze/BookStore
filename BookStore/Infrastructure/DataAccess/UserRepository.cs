@@ -18,7 +18,7 @@ namespace Infrastructure.DataAccess
         {
             _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
         }
-        public void Add_Order(OrderDTO orderDTO)
+        public void Add_Order(int id)
         {
             using (var conn = new OracleConnection(_connectionString))
             {
@@ -26,7 +26,7 @@ namespace Infrastructure.DataAccess
                 using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_ORDERS.add_order", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("v_user_id", OracleDbType.Int32).Value = orderDTO.User_id;
+                    cmd.Parameters.Add("v_user_id", OracleDbType.Int32).Value = id;
 
                     cmd.ExecuteNonQuery();
                 }
