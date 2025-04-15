@@ -22,7 +22,7 @@ namespace Infrastructure.DataAccess
             using (var conn = new OracleConnection(_connectionString))
             {
                 conn.Open();
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.Add_book", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKS.Add_book", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("v_book_name", OracleDbType.Varchar2).Value = book.Book_name;
@@ -42,7 +42,7 @@ namespace Infrastructure.DataAccess
             using (var conn = new OracleConnection(_connectionString))
             {
                 conn.Open();
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.delete_book", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKS.delete_book", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("p_id", OracleDbType.Int32).Value = id;
@@ -58,7 +58,7 @@ namespace Infrastructure.DataAccess
             {
                 conn.Open ();
                 List<Order> orders = new List<Order>();
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_ORDERS.get_orders", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKSTORE_ORDERS.get_orders", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("p_result", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
@@ -88,7 +88,7 @@ namespace Infrastructure.DataAccess
             using (var conn = new OracleConnection(_connectionString))
             {
                 conn.Open();
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_ORDERS.complete_order", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKSTORE_ORDERS.complete_order", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("v_order_id", OracleDbType.Int32).Value = id;
@@ -107,7 +107,7 @@ namespace Infrastructure.DataAccess
             {
                 conn.Open();
 
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKSTORE_ORDERS.get_user_order", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKSTORE_ORDERS.get_user_order", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -149,7 +149,7 @@ namespace Infrastructure.DataAccess
             {
                 conn.Open();
                 List<Book> books = new List<Book>();
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.get_book", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKS.get_book", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("p_result", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
@@ -180,7 +180,7 @@ namespace Infrastructure.DataAccess
             {
                 conn.Open();
                 List<Book> books = new List<Book>();
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.get_book_by_id", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKS.get_book_by_id", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("p_id", OracleDbType.Int32).Value = id;
@@ -211,7 +211,7 @@ namespace Infrastructure.DataAccess
             using (var conn = new OracleConnection(_connectionString))
             {
                 conn.Open();
-                using (var cmd = new OracleCommand("olerning.PKG_NO_BOOKS.update_book", conn))
+                using (var cmd = new OracleCommand("SYS.PKG_NO_BOOKS.update_book", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("p_id", OracleDbType.Int32).Value = book.Id;

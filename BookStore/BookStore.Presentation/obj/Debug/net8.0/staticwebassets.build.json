@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "3W22x+pLAchl7DowkIbvUHM2i3DPyqAhG0cZq8siOw8=",
+  "Hash": "z17u9LsRO7Zo0G/6GSImSY6qvQkXOKbWCz111clPvSs=",
   "Source": "BookStore.Presentation",
   "BasePath": "_content/BookStore.Presentation",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

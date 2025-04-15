@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {}
+    "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj": {
+    "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\obj\\",
+        "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\nikao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nikao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj"
+              "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\Domain.csproj"
               }
             }
           }
@@ -44,12 +47,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.15, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.12, )"
@@ -57,6 +65,10 @@
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Microsoft.NET.Build.Containers": {
+              "target": "Package",
+              "version": "[8.0.408, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
@@ -83,21 +95,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {
+    "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
         "projectName": "BookStore.Presentation",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
-        "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
+        "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+        "packagesPath": "C:\\Users\\nikao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nikao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,15 +121,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -127,15 +142,28 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.15, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.12, )"
+            },
+            "Microsoft.NET.Build.Containers": {
+              "target": "Package",
+              "version": "[8.0.408, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -169,21 +197,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj": {
+    "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\nikao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nikao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -191,7 +223,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -209,11 +240,22 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.15, )"
+            },
+            "Microsoft.NET.Build.Containers": {
+              "target": "Package",
+              "version": "[8.0.408, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -230,21 +272,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\nikao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nikao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -252,18 +298,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Application\\Application.csproj"
+              "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Application\\Application.csproj"
               },
-              "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Domain\\Domain.csproj"
+              "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Domain\\Domain.csproj"
               }
             }
           }
@@ -277,15 +322,24 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.15, )"
+            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "Microsoft.NET.Build.Containers": {
+              "target": "Package",
+              "version": "[8.0.408, )"
             },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
@@ -308,7 +362,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

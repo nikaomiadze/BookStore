@@ -2,6 +2,24 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Docker.DotNet/3.125.15": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.Buffers": "4.5.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.1/Docker.DotNet.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Docker.DotNet.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "FluentAssertions/8.0.1": {
         "type": "package",
         "compile": {
@@ -228,6 +246,13 @@
           }
         }
       },
+      "Microsoft.NET.Build.Containers/8.0.408": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.Build.Containers.props": {},
+          "build/Microsoft.NET.Build.Containers.targets": {}
+        }
+      },
       "Microsoft.OpenApi/1.6.22": {
         "type": "package",
         "compile": {
@@ -238,6 +263,26 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -318,6 +363,15 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
       },
       "System.Configuration.ConfigurationManager/8.0.0": {
         "type": "package",
@@ -494,13 +548,24 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
       "Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Docker.DotNet": "3.125.15",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.12",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.1",
+          "Microsoft.NET.Build.Containers": "8.0.408",
           "Swashbuckle.AspNetCore.Swagger": "7.2.0",
           "System.IdentityModel.Tokens.Jwt": "8.3.1"
         },
@@ -514,6 +579,10 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Docker.DotNet": "3.125.15",
+          "Microsoft.NET.Build.Containers": "8.0.408"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -526,8 +595,10 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Application": "1.0.0",
+          "Docker.DotNet": "3.125.15",
           "Domain": "1.0.0",
           "FluentAssertions": "8.0.1",
+          "Microsoft.NET.Build.Containers": "8.0.408",
           "Oracle.ManagedDataAccess.Core": "23.7.0"
         },
         "compile": {
@@ -540,6 +611,23 @@
     }
   },
   "libraries": {
+    "Docker.DotNet/3.125.15": {
+      "sha512": "XN8FKxVv8Mjmwu104/Hl9lM61pLY675s70gzwSj8KR5pwblo8HfWLcCuinh9kYsqujBkMH4HVRCEcRuU6al4BQ==",
+      "type": "package",
+      "path": "docker.dotnet/3.125.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "docker.dotnet.3.125.15.nupkg.sha512",
+        "docker.dotnet.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Docker.DotNet.dll",
+        "lib/netstandard2.0/Docker.DotNet.pdb",
+        "lib/netstandard2.1/Docker.DotNet.dll",
+        "lib/netstandard2.1/Docker.DotNet.pdb"
+      ]
+    },
     "FluentAssertions/8.0.1": {
       "sha512": "IW5CdXiD4BIijMkJsEajhkQr7HSgzoxZBHp77b4tm8isCKGaDH2AGugW6DLS0/EPhO/MCZ2JOGg6ObdlKISJMg==",
       "type": "package",
@@ -1146,6 +1234,89 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Microsoft.NET.Build.Containers/8.0.408": {
+      "sha512": "SFBeHPVNnN1ZDpmQK9CjNFK0D4PWMbTBwUwgmXVZaczdPJrfI29BLfBFrVU6DSf3T0nL4PHuihxbnj2uN3dghQ==",
+      "type": "package",
+      "path": "microsoft.net.build.containers/8.0.408",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "build/Microsoft.NET.Build.Containers.props",
+        "build/Microsoft.NET.Build.Containers.targets",
+        "containerize/Microsoft.DotNet.Cli.Utils.dll",
+        "containerize/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "containerize/Microsoft.Extensions.Configuration.Binder.dll",
+        "containerize/Microsoft.Extensions.Configuration.dll",
+        "containerize/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "containerize/Microsoft.Extensions.DependencyInjection.dll",
+        "containerize/Microsoft.Extensions.DependencyModel.dll",
+        "containerize/Microsoft.Extensions.Logging.Abstractions.dll",
+        "containerize/Microsoft.Extensions.Logging.Configuration.dll",
+        "containerize/Microsoft.Extensions.Logging.Console.dll",
+        "containerize/Microsoft.Extensions.Logging.dll",
+        "containerize/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "containerize/Microsoft.Extensions.Options.dll",
+        "containerize/Microsoft.Extensions.Primitives.dll",
+        "containerize/Microsoft.NET.Build.Containers.dll",
+        "containerize/Newtonsoft.Json.dll",
+        "containerize/NuGet.Common.dll",
+        "containerize/NuGet.Configuration.dll",
+        "containerize/NuGet.DependencyResolver.Core.dll",
+        "containerize/NuGet.Frameworks.dll",
+        "containerize/NuGet.LibraryModel.dll",
+        "containerize/NuGet.Packaging.dll",
+        "containerize/NuGet.ProjectModel.dll",
+        "containerize/NuGet.Protocol.dll",
+        "containerize/NuGet.Versioning.dll",
+        "containerize/System.CommandLine.dll",
+        "containerize/Valleysoft.DockerCredsProvider.dll",
+        "containerize/containerize.dll",
+        "containerize/containerize.runtimeconfig.json",
+        "microsoft.net.build.containers.8.0.408.nupkg.sha512",
+        "microsoft.net.build.containers.nuspec",
+        "tasks/net472/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net472/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net472/Microsoft.Extensions.DependencyModel.dll",
+        "tasks/net472/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net472/Microsoft.Extensions.Logging.dll",
+        "tasks/net472/Microsoft.Extensions.Options.dll",
+        "tasks/net472/Microsoft.Extensions.Primitives.dll",
+        "tasks/net472/Microsoft.NET.Build.Containers.dll",
+        "tasks/net472/Newtonsoft.Json.dll",
+        "tasks/net472/NuGet.Common.dll",
+        "tasks/net472/NuGet.Configuration.dll",
+        "tasks/net472/NuGet.DependencyResolver.Core.dll",
+        "tasks/net472/NuGet.Frameworks.dll",
+        "tasks/net472/NuGet.LibraryModel.dll",
+        "tasks/net472/NuGet.Packaging.dll",
+        "tasks/net472/NuGet.ProjectModel.dll",
+        "tasks/net472/NuGet.Protocol.dll",
+        "tasks/net472/NuGet.Versioning.dll",
+        "tasks/net8.0/Microsoft.DotNet.Cli.Utils.dll",
+        "tasks/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net8.0/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net8.0/Microsoft.Extensions.DependencyModel.dll",
+        "tasks/net8.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net8.0/Microsoft.Extensions.Logging.dll",
+        "tasks/net8.0/Microsoft.Extensions.Options.dll",
+        "tasks/net8.0/Microsoft.Extensions.Primitives.dll",
+        "tasks/net8.0/Microsoft.NET.Build.Containers.deps.json",
+        "tasks/net8.0/Microsoft.NET.Build.Containers.dll",
+        "tasks/net8.0/Newtonsoft.Json.dll",
+        "tasks/net8.0/NuGet.Common.dll",
+        "tasks/net8.0/NuGet.Configuration.dll",
+        "tasks/net8.0/NuGet.DependencyResolver.Core.dll",
+        "tasks/net8.0/NuGet.Frameworks.dll",
+        "tasks/net8.0/NuGet.LibraryModel.dll",
+        "tasks/net8.0/NuGet.Packaging.dll",
+        "tasks/net8.0/NuGet.ProjectModel.dll",
+        "tasks/net8.0/NuGet.Protocol.dll",
+        "tasks/net8.0/NuGet.Versioning.dll",
+        "tasks/net8.0/Valleysoft.DockerCredsProvider.dll"
+      ]
+    },
     "Microsoft.OpenApi/1.6.22": {
       "sha512": "aBvunmrdu/x+4CaA/UP1Jx4xWGwk4kymhoIRnn2Vp+zi5/KOPQJ9EkSXHRUr01WcGKtYl3Au7XfkPJbU1G2sjQ==",
       "type": "package",
@@ -1159,6 +1330,113 @@
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
         "microsoft.openapi.1.6.22.nupkg.sha512",
         "microsoft.openapi.nuspec"
+      ]
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {
+      "sha512": "8NudeHOE56YsY59HYY89akRMup8Ho+7Y3cADTGjajjWroXVU9RQai2nA6PfteB8AuzmRHZ5NZQB2BnWhQEul5g==",
+      "type": "package",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.21.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "EULA.md",
+        "ThirdPartyNotices.txt",
+        "build/Container.props",
+        "build/Container.targets",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets",
+        "build/Rules/GeneralBrowseObject.xaml",
+        "build/Rules/cs-CZ/GeneralBrowseObject.xaml",
+        "build/Rules/de-DE/GeneralBrowseObject.xaml",
+        "build/Rules/es-ES/GeneralBrowseObject.xaml",
+        "build/Rules/fr-FR/GeneralBrowseObject.xaml",
+        "build/Rules/it-IT/GeneralBrowseObject.xaml",
+        "build/Rules/ja-JP/GeneralBrowseObject.xaml",
+        "build/Rules/ko-KR/GeneralBrowseObject.xaml",
+        "build/Rules/pl-PL/GeneralBrowseObject.xaml",
+        "build/Rules/pt-BR/GeneralBrowseObject.xaml",
+        "build/Rules/ru-RU/GeneralBrowseObject.xaml",
+        "build/Rules/tr-TR/GeneralBrowseObject.xaml",
+        "build/Rules/zh-CN/GeneralBrowseObject.xaml",
+        "build/Rules/zh-TW/GeneralBrowseObject.xaml",
+        "build/ToolsTarget.props",
+        "build/ToolsTarget.targets",
+        "icon.png",
+        "microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
+        "microsoft.visualstudio.azure.containers.tools.targets.nuspec",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Common.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Shared.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Tasks.dll",
+        "tools/Newtonsoft.Json.dll",
+        "tools/System.Security.Principal.Windows.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Oracle.ManagedDataAccess.Core/23.7.0": {
@@ -1274,6 +1552,37 @@
         "package-readme.md",
         "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "type": "package",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Configuration.ConfigurationManager/8.0.0": {
@@ -1552,6 +1861,43 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Application/1.0.0": {
       "type": "project",
       "path": "../Application/Application.csproj",
@@ -1570,27 +1916,35 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Docker.DotNet >= 3.125.15",
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.12",
+      "Microsoft.NET.Build.Containers >= 8.0.408",
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
       "Swashbuckle.AspNetCore.Swagger >= 7.2.0",
       "System.IdentityModel.Tokens.Jwt >= 8.3.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\": {}
+    "C:\\Users\\nikao\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
       "projectName": "BookStore.Presentation",
-      "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
-      "packagesPath": "C:\\Users\\nikoloz.omiadze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
+      "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\BookStore.Presentation.csproj",
+      "packagesPath": "C:\\Users\\nikao\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\BookStore.Presentation\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nikoloz.omiadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nikao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1598,15 +1952,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\nikoloz.omiadze\\Desktop\\BookStore\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\nikao\\Desktop\\projects\\BookStore\\BookStore\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -1620,15 +1973,28 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Docker.DotNet": {
+            "target": "Package",
+            "version": "[3.125.15, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[8.0.12, )"
+          },
+          "Microsoft.NET.Build.Containers": {
+            "target": "Package",
+            "version": "[8.0.408, )"
+          },
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+            "target": "Package",
+            "version": "[1.21.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -1662,7 +2028,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
